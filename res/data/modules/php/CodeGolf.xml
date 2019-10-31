@@ -5,6 +5,8 @@
                lang="PHP"/>
     <lesson filename="ImplementMissingMethodsWithAltEnter.xml" lang="php"/>
     <lesson-kt implementationClass="training.learn.lesson.php.completion.PhpBasicCompletionsLesson"/>
+
+    <lesson filename="ExtractVariable.xml" lang="php"/>
     <!--   <lesson-kt sample="01.Select.go.sample" implementationClass="training.learn.lesson.general.SelectLesson" lang="go"/>
    <lesson filename="02.Comment.xml" lang="go"/>
    <lesson-kt implementationClass="training.learn.lesson.go.completion.GoBasicCompletionLesson"/>

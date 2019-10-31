@@ -1,0 +1,16 @@
+<xml type="Scenario" name="Extract Variable" id="CodeGolf.ExtractVariable" lang="PHP">
+    <MouseBlock>
+        <CopyText><![CDATA[<?php
+
+function report(string $inputName)
+{
+    return (empty($inputName) ? "Unknown" : $inputName) . " is here.";
+}]]></CopyText>
+        <CaretBlock>
+            <SetSelection start-position="5:12" end-position="5:56" />
+            <MoveCaret position="5:36" />
+            <Try triggers="IntroduceVariable;NextTemplateVariable">Press <action>IntroduceVariable</action> to extract a variable.</Try>
+            <Win/>
+        </CaretBlock>
+    </MouseBlock>
+</xml>
