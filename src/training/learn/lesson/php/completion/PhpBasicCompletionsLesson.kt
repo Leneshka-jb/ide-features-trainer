@@ -109,10 +109,7 @@ class Cat
         }
 
     private fun checkPurrInvocation(editor: Editor): Boolean {
-        val project = editor.project ?: return false
-        val file = FileDocumentManager.getInstance().getFile(editor.document) ?: return false
-        val psiFile = PsiManager.getInstance(project).findFile(file)
-        if (psiFile !is PhpFile) return false
+        val psiFile = getPhpFile(editor) ?: return false
         val catClass = PhpPsiUtil.findClass(psiFile) { clazz -> clazz.name == "Cat" } ?: return false
         val mainMethod = catClass.methods.first { method -> method.name == "usualDay" } ?: return false
         return mainMethod.text.contains("${'$'}this->purrr()")
@@ -126,4 +123,12 @@ class Cat
         val subSequence = editor.document.charsSequence.subSequence(offset - text.length, offset)
         return subSequence.toString() == text
     }
+}
+
+fun getPhpFile(editor: Editor): PhpFile? {
+    val project = editor.project ?: return null
+    val file = FileDocumentManager.getInstance().getFile(editor.document) ?: return null
+    val psiFile = PsiManager.getInstance(project).findFile(file)
+    if (psiFile !is PhpFile) return null
+    return psiFile
 }
