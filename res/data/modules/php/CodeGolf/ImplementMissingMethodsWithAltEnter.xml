@@ -1,0 +1,19 @@
+<xml type="Scenario" name="Implement Missing Methods" id="CodeGolf.ImplementMissingMethodsWithAltEnter" lang="PHP">
+    <MouseBlock>
+        <CopyText><![CDATA[<?php
+
+class Fixer
+{
+    public function fixEverything(string $topic)
+    {
+        $this->yetToImplementFunction("Fix ".$topic);
+    }
+}
+]]></CopyText>
+    </MouseBlock>
+    <Try trigger="GotoNextError">Press <action>GotoNextError</action> to go to the next highlighted error in the file.
+    </Try>
+    <Try check="training.check.php.PhpImplementMissingMethodsWithAltEnterCheck">Press <action>ShowIntentionActions</action> and select <strong>Add method</strong>.
+    </Try>
+    <Win/>
+</xml>

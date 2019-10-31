@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module name="Intro course before Code Golf" lessonsPath="CodeGolf/" version="0.1" id="phpCodeGolf" fileType="SCRATCH"
+<module name="Intro course before Code Golf" lessonsPath="CodeGolf/" version="0.1" id="phpCodeGolf" fileType="PROJECT"
         description="Welcome to the crash course prepared specifically for the conference and Code Golf competititon.">
     <lesson-kt sample="FindActions.php" implementationClass="training.learn.lesson.general.GotoActionLesson"
-               lang="php"/>
+               lang="PHP"/>
+    <lesson filename="ImplementMissingMethodsWithAltEnter.xml" lang="php"/>
     <!--   <lesson-kt sample="01.Select.go.sample" implementationClass="training.learn.lesson.general.SelectLesson" lang="go"/>
    <lesson filename="02.Comment.xml" lang="go"/>
    <lesson-kt implementationClass="training.learn.lesson.go.completion.GoBasicCompletionLesson"/>
