@@ -2,7 +2,7 @@
 
 
 <idea-plugin>
-    <extensions defaultExtensionNs="training">
+    <extensions defaultExtensionNs="php.codeGolf.training">
         <TrainingLangExtension language="go" implementationClass="training.lang.GoLangSupport"/>
     </extensions>
 </idea-plugin>

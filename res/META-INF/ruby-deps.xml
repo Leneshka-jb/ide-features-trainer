@@ -2,7 +2,7 @@
 
 
 <idea-plugin>
-    <extensions defaultExtensionNs="training">
+    <extensions defaultExtensionNs="php.codeGolf.training">
         <TrainingLangExtension language="ruby" implementationClass="training.lang.RubyLangSupport"/>
     </extensions>
 </idea-plugin>

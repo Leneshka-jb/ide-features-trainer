@@ -1,7 +1,7 @@
 <idea-plugin>
-    <id>training</id>
+    <id>php.codeGolf.training</id>
     <name>IDE Features Trainer</name>
-    <vendor email="sergey.karashevich@jetbrains.com" url="http://www.jetbrains.com">JetBrains</vendor>
+    <vendor url="http://www.jetbrains.com">JetBrains</vendor>
 
     <description><![CDATA[
 
@@ -23,7 +23,7 @@
     <!--<depends optional="true" config-file="objc-deps.xml">com.intellij.modules.cidr.lang</depends>-->
     <depends optional="true" config-file="swift-deps.xml">com.intellij.modules.cidr.lang</depends>
     <!--<depends optional="true" config-file="webstorm-deps.xml">com.intellij.modules.webstorm</depends>-->
-    <!--<depends optional="true" config-file="phpstorm-deps.xml">com.jetbrains.php</depends>-->
+    <depends optional="true" config-file="phpstorm-deps.xml">com.jetbrains.php</depends>
     <!--<depends optional="true" config-file="clion-deps.xml">com.intellij.modules.clion</depends>-->
     <!--<depends optional="true" config-file="rider-deps.xml">com.intellij.modules.rider</depends>-->
 

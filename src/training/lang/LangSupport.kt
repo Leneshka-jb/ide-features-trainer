@@ -17,7 +17,7 @@ interface LangSupport {
         get() = "Learning"
 
     companion object {
-        val EP_NAME = "training.TrainingLangExtension"
+        val EP_NAME = "php.codeGolf.training.TrainingLangExtension"
     }
 
     /**

@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <idea-plugin>
-
     <extensions defaultExtensionNs="php.codeGolf.training">
-        <TrainingLangExtension language="Python" implementationClass="training.lang.PythonLangSupport"/>
+        <TrainingLangExtension language="PHP" implementationClass="training.lang.PhpStormSupport"/>
     </extensions>
-
 </idea-plugin>

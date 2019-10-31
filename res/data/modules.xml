@@ -26,5 +26,8 @@
         <module name="modules/ruby/Completions.xml"/>
         <module name="modules/ruby/Refactorings.xml"/>
     </language>
+    <language lang="php">
+        <module name="modules/php/CodeGolf.xml"/>
+    </language>
 </modules>
 
