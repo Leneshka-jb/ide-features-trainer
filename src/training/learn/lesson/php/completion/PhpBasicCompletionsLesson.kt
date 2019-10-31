@@ -27,15 +27,6 @@ class Cat
     {
     }
 
-    function bringToy()
-    {
-    }
-
-    function breakVase()
-    {
-
-    }
-
     function usualDay()
     {
         <caret>
@@ -54,15 +45,6 @@ class Cat
     {
     }
 
-    function bringToy()
-    {
-    }
-
-    function breakVase()
-    {
-
-    }
-
     function usualDay()
     {
         ${'$'}this->purrr();
@@ -70,6 +52,35 @@ class Cat
     }
 }
 """.trimIndent())
+    private val sample3 = parseLessonSample("""<?php
+
+class Cat
+{
+    function purrr()
+    {
+    }
+
+    function meow()
+    {
+    }
+
+    function bringToy()
+    {
+    }
+
+    function breakVase()
+    {
+    }
+
+    function usualDay()
+    {
+        ${'$'}this->purrr();
+        ${'$'}this->meow();
+        ${'$'}this->br<caret>eakVase();
+    }
+}
+""".trimIndent())
+
 
     override val lessonContent: LessonContext.() -> Unit
         get() = {
@@ -100,6 +111,22 @@ class Cat
                     actions(it)
                     ideFrame {
                         jList("meow")
+                        shortcut(Key.ENTER)
+                    }
+                }
+            }
+            waitBeforeContinue(500)
+            prepareSample(sample3)
+            actionTask("CodeCompletion") { "Press ${action(it)}to show completion options." }
+            task("EditorChooseLookupItemReplace") {
+                text("Choose <code>bringToy()</code>, for example, and press ${action("EditorTab")}.\n" +
+                        "This overwrites the word at the caret rather than simply inserting it.")
+                trigger(it)
+                trigger("EditorChooseLookupItemReplace") { textBeforeCaret(editor, "bringToy()") }
+                test {
+                    actions(it)
+                    ideFrame {
+                        jList("bringToy")
                         shortcut(Key.ENTER)
                     }
                 }
