@@ -3,10 +3,6 @@ package training.learn.lesson.php.completion
 import com.intellij.openapi.editor.Editor
 import com.intellij.openapi.fileEditor.FileDocumentManager
 import com.intellij.psi.PsiManager
-import com.intellij.testGuiFramework.framework.GuiTestUtil.shortcut
-import com.intellij.testGuiFramework.framework.GuiTestUtil.typeText
-import com.intellij.testGuiFramework.impl.jList
-import com.intellij.testGuiFramework.util.Key
 import com.jetbrains.php.lang.psi.PhpFile
 import com.jetbrains.php.lang.psi.PhpPsiUtil
 import training.learn.interfaces.Module
@@ -92,13 +88,6 @@ class Cat
                 trigger("EditorChooseLookupItem",
                         { editor.document.text },
                         { before, now -> checkPurrInvocation(editor) && now != before })
-                test {
-                    ideFrame {
-                        typeText("pu")
-                        jList("purrr")
-                        shortcut(Key.ENTER)
-                    }
-                }
             }
             waitBeforeContinue(500)
             prepareSample(sample2)
@@ -107,13 +96,6 @@ class Cat
                         "Select <code>meow()</code> and press <action>EditorEnter</action>.")
                 trigger(it)
                 trigger("EditorChooseLookupItem") { textBeforeCaret(editor, "meow();") }
-                test {
-                    actions(it)
-                    ideFrame {
-                        jList("meow")
-                        shortcut(Key.ENTER)
-                    }
-                }
             }
             waitBeforeContinue(500)
             prepareSample(sample3)
@@ -123,13 +105,6 @@ class Cat
                         "This overwrites the word at the caret rather than simply inserting it.")
                 trigger(it)
                 trigger("EditorChooseLookupItemReplace") { textBeforeCaret(editor, "bringToy()") }
-                test {
-                    actions(it)
-                    ideFrame {
-                        jList("bringToy")
-                        shortcut(Key.ENTER)
-                    }
-                }
             }
         }
 
