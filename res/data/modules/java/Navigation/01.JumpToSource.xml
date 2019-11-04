@@ -40,6 +40,6 @@ class JumpToSourceDemo {
             <Try trigger="EditSource">Let's start with one of the most frequently used features, Jump to Source. Press <action>EditSource</action> to look up the source of <code>Params</code>.</Try>
     </CaretBlock>
 </MouseBlock>
-        <Try check="training.check.CheckJumpFromString" trigger="EditSource">You may also Jump to Source of classes implemented in the JDK. Place the caret on <code>String</code> and press <action>EditSource</action>.</Try>
+        <Try check="php.codeGolf.training.check.CheckJumpFromString" trigger="EditSource">You may also Jump to Source of classes implemented in the JDK. Place the caret on <code>String</code> and press <action>EditSource</action>.</Try>
     <Win/>
 </xml>

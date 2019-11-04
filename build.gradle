@@ -91,13 +91,13 @@ task testsJar(type: Jar, dependsOn: classes) {
 
 prepareSandbox {
     from(testsJar) {
-        into "training/lib"
+        into "php.codeGolf.training/lib"
     }
 }
 
 prepareTestingSandbox {
     from(testsJar) {
-        into "training/lib"
+        into "php.codeGolf.training/lib"
     }
 }
 

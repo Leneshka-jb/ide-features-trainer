@@ -14,6 +14,6 @@ class FrameDemo {
 </MouseBlock>
         <MoveCaret position="7:23" />
         <Try trigger="ParameterInfo">Press <action>ParameterInfo</action> to see the method signature.</Try>
-        <Try check="training.check.CheckParameterInfo">Use a width of <strong>175</strong> and a height of <strong>100</strong>.</Try>
+        <Try check="php.codeGolf.training.check.CheckParameterInfo">Use a width of <strong>175</strong> and a height of <strong>100</strong>.</Try>
     <Win/>
 </xml>

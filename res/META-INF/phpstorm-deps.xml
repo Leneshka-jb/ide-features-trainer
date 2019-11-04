@@ -2,6 +2,6 @@
 
 <idea-plugin>
     <extensions defaultExtensionNs="php.codeGolf.training">
-        <TrainingLangExtension language="PHP" implementationClass="training.lang.PhpStormSupport"/>
+        <TrainingLangExtension language="PHP" implementationClass="php.codeGolf.training.lang.PhpStormSupport"/>
     </extensions>
 </idea-plugin>

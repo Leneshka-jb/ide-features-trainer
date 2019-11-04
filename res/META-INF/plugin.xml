@@ -5,11 +5,11 @@
 
     <description><![CDATA[
 
-        <p>Learn basic shortcuts and essential features interactively – right inside the IDE. No need to read long manuals or look for screencasts. Just install this plugin, open the IDE, and go to the Learn tool window to start training.</p>
+        <p>Learn basic shortcuts and essential features interactively – right inside the IDE. No need to read long manuals or look for screencasts. Just install this plugin, open the IDE, and go to the Learn tool window to start php.codeGolf.training.</p>
     ]]></description>
     <application-components>
         <component>
-            <implementation-class>training.learn.TrainingProjectLifecycleListener</implementation-class>
+            <implementation-class>php.codeGolf.training.learn.TrainingProjectLifecycleListener</implementation-class>
         </component>
     </application-components>
 
@@ -30,7 +30,7 @@
     <extensionPoints>
         <extensionPoint name="TrainingLangExtension"
                         beanClass="com.intellij.lang.LanguageExtensionPoint">
-            <with attribute="implementationClass" implements="training.lang.LangSupport"/>
+            <with attribute="implementationClass" implements="php.codeGolf.training.lang.LangSupport"/>
         </extensionPoint>
     </extensionPoints>
 
@@ -40,28 +40,28 @@
 
     <extensions defaultExtensionNs="com.intellij">
 
-        <actionPromoter implementation="training.editor.actions.LearnActionPromoter"/>
+        <actionPromoter implementation="php.codeGolf.training.editor.actions.LearnActionPromoter"/>
         <!-- groupId should be same to StatisticBase.GROUP_ID and version to StatisticBase.VERSION -->
         <statistics.counterUsagesCollector groupId="ideFeaturesTrainer" version="3"/>
         <statistics.validation.customWhiteListRule
-                implementation="training.statistic.IdeFeaturesTrainerRuleValidator"/>
+                implementation="php.codeGolf.training.statistic.IdeFeaturesTrainerRuleValidator"/>
 
         <applicationService
-                serviceImplementation="training.learn.CourseManager"/>
+                serviceImplementation="php.codeGolf.training.learn.CourseManager"/>
         <applicationService
-                serviceImplementation="training.statistic.ActivityManager"/>
+                serviceImplementation="php.codeGolf.training.statistic.ActivityManager"/>
         <applicationService
-                serviceImplementation="training.learn.lesson.LessonManager"/>
+                serviceImplementation="php.codeGolf.training.learn.lesson.LessonManager"/>
         <applicationService
-                serviceImplementation="training.lang.LangManager"/>
+                serviceImplementation="php.codeGolf.training.lang.LangManager"/>
         <applicationService
-                serviceImplementation="training.ui.UISettings"/>
+                serviceImplementation="php.codeGolf.training.ui.UISettings"/>
         <applicationService
-                serviceImplementation="training.learn.lesson.LessonStateBase"/>
+                serviceImplementation="php.codeGolf.training.learn.lesson.LessonStateBase"/>
         <applicationService
-                serviceImplementation="training.statistic.StatisticBase"/>
-        <toolWindow id="Learn" anchor="left" factoryClass="training.ui.LearnToolWindowFactory"
-                    conditionClass="training.ui.LearnCondition"/>
+                serviceImplementation="php.codeGolf.training.statistic.StatisticBase"/>
+        <toolWindow id="Learn" anchor="left" factoryClass="php.codeGolf.training.ui.LearnToolWindowFactory"
+                    conditionClass="php.codeGolf.training.ui.LearnCondition"/>
 
     </extensions>
 
@@ -70,23 +70,23 @@
 
     <project-components>
         <component>
-            <implementation-class>training.components.LearnProjectComponent</implementation-class>
+            <implementation-class>php.codeGolf.training.components.LearnProjectComponent</implementation-class>
         </component>
     </project-components>
 
     <actions>
-        <action id="Learn.WelcomeScreen.StartLearn" class="training.actions.StartLearnAction" icon="/img/chevron.png">
+        <action id="Learn.WelcomeScreen.StartLearn" class="php.codeGolf.training.actions.StartLearnAction" icon="/img/chevron.png">
             <add-to-group group-id="WelcomeScreen.QuickStart" anchor="last"/>
         </action>
 
-        <action id="learn.next.lesson" class="training.actions.NextLessonAction" text="Next Lesson">
+        <action id="learn.next.lesson" class="php.codeGolf.training.actions.NextLessonAction" text="Next Lesson">
             <keyboard-shortcut first-keystroke="alt shift RIGHT" keymap="$default"/>
             <keyboard-shortcut first-keystroke="control shift RIGHT" keymap="Mac OS X 10.5+"/>
             <keyboard-shortcut first-keystroke="control shift RIGHT" keymap="Mac OS X"/>
         </action>
-        <action id="learn.open.lesson" text="Open Lesson" class="training.actions.OpenLessonAction"/>
+        <action id="learn.open.lesson" text="Open Lesson" class="php.codeGolf.training.actions.OpenLessonAction"/>
         <!--TODO: REMOVE THIS ACTION BEFORE RELEASE-->
-        <action id="learn.open.chooseLang" text="Choose Lang" class="training.actions.ShowChooseLangPanelAction"/>
+        <action id="learn.open.chooseLang" text="Choose Lang" class="php.codeGolf.training.actions.ShowChooseLangPanelAction"/>
     </actions>
 
     <extensions defaultExtensionNs="com.intellij">

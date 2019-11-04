@@ -3,7 +3,7 @@
 We should be careful with paths of all lessons and _xml files_ that we are using to hold lessons data. 
 
 If you need to add support for a custom language you should:
-1. Add extension for `training.lang.LangSupport`
+1. Add extension for `php.codeGolf.training.lang.LangSupport`
 2. Add your _LearnProject_ realisation and put it in `res/learnProjects/$langName$`
 3. Specify _LearnProject_ name in `LangSupport`
 

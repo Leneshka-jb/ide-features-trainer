@@ -3,6 +3,6 @@
 
 <idea-plugin>
     <extensions defaultExtensionNs="php.codeGolf.training">
-        <TrainingLangExtension language="ruby" implementationClass="training.lang.RubyLangSupport"/>
+        <TrainingLangExtension language="ruby" implementationClass="php.codeGolf.training.lang.RubyLangSupport"/>
     </extensions>
 </idea-plugin>

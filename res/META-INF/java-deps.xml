@@ -3,6 +3,6 @@
 
 <idea-plugin>
     <extensions defaultExtensionNs="php.codeGolf.training">
-        <TrainingLangExtension language="JAVA" implementationClass="training.lang.JavaLangSupport"/>
+        <TrainingLangExtension language="JAVA" implementationClass="php.codeGolf.training.lang.JavaLangSupport"/>
     </extensions>
 </idea-plugin>

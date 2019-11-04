@@ -21,6 +21,6 @@ func sayHi(s fmt.Stringer) {
 ]]></CopyText>
 </MouseBlock>
     <Try trigger="GotoNextError">Press <action>GotoNextError</action> to go to the next highlighted error in the file.</Try>
-    <Try check="training.check.go.GoCheckImplementsStringer">Press <action>ShowIntentionActions</action> and select <strong>Implement missing methods</strong>.</Try>
+    <Try check="php.codeGolf.training.check.go.GoCheckImplementsStringer">Press <action>ShowIntentionActions</action> and select <strong>Implement missing methods</strong>.</Try>
     <Win/>
 </xml>

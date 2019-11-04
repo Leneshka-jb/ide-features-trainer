@@ -3,6 +3,6 @@
 
 <idea-plugin>
     <extensions defaultExtensionNs="php.codeGolf.training">
-        <TrainingLangExtension language="go" implementationClass="training.lang.GoLangSupport"/>
+        <TrainingLangExtension language="go" implementationClass="php.codeGolf.training.lang.GoLangSupport"/>
     </extensions>
 </idea-plugin>

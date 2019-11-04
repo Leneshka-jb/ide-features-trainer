@@ -3,7 +3,7 @@
 <idea-plugin>
 
     <extensions defaultExtensionNs="php.codeGolf.training">
-        <TrainingLangExtension language="Python" implementationClass="training.lang.PythonLangSupport"/>
+        <TrainingLangExtension language="Python" implementationClass="php.codeGolf.training.lang.PythonLangSupport"/>
     </extensions>
 
 </idea-plugin>
