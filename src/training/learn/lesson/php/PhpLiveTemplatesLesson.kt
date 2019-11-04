@@ -1,4 +1,4 @@
-package training.learn.lesson.php.completion
+package training.learn.lesson.php
 
 import com.intellij.openapi.editor.Editor
 import com.intellij.openapi.util.Condition
