@@ -15,13 +15,13 @@
 
     <depends optional="true">com.intellij.testGuiFramework</depends>
 
-    <depends optional="true" config-file="java-deps.xml">com.intellij.modules.java</depends>
+    <!--<depends optional="true" config-file="java-deps.xml">com.intellij.modules.java</depends>
     <depends optional="true" config-file="ruby-deps.xml">com.intellij.modules.ruby</depends>
-    <!--<depends optional="true" config-file="python-deps.xml">com.intellij.modules.python</depends>-->
-    <!--<depends optional="true" config-file="python-deps.xml">com.intellij.modules.python</depends>-->
+    &lt;!&ndash;<depends optional="true" config-file="python-deps.xml">com.intellij.modules.python</depends>&ndash;&gt;
+    &lt;!&ndash;<depends optional="true" config-file="python-deps.xml">com.intellij.modules.python</depends>&ndash;&gt;
     <depends optional="true" config-file="go-deps.xml">org.jetbrains.plugins.go</depends>
-    <!--<depends optional="true" config-file="objc-deps.xml">com.intellij.modules.cidr.lang</depends>-->
-    <depends optional="true" config-file="swift-deps.xml">com.intellij.modules.cidr.lang</depends>
+    &lt;!&ndash;<depends optional="true" config-file="objc-deps.xml">com.intellij.modules.cidr.lang</depends>&ndash;&gt;
+    <depends optional="true" config-file="swift-deps.xml">com.intellij.modules.cidr.lang</depends>-->
     <!--<depends optional="true" config-file="webstorm-deps.xml">com.intellij.modules.webstorm</depends>-->
     <depends optional="true" config-file="phpstorm-deps.xml">com.jetbrains.php</depends>
     <!--<depends optional="true" config-file="clion-deps.xml">com.intellij.modules.clion</depends>-->
