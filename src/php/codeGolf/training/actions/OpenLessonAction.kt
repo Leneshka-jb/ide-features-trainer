@@ -265,7 +265,7 @@ class OpenLessonAction : AnAction() {
 
     private fun openLessonWhenLearnProjectStart(lesson: Lesson, myLearnProject: Project) {
         val startupManager = StartupManager.getInstance(myLearnProject)
-        if (startupManager is StartupManagerEx && startupManager.postStartupActivityPassed()) LOG.warn("Post startup activity has been already passed")
+       // if (startupManager is StartupManagerEx && startupManager.postStartupActivityPassed()) LOG.warn("Post startup activity has been already passed")
         startupManager.registerPostStartupActivity {
             val toolWindowManager = ToolWindowManager.getInstance(myLearnProject)
             val learnToolWindow = toolWindowManager.getToolWindow(LearnToolWindowFactory.LEARN_TOOL_WINDOW)

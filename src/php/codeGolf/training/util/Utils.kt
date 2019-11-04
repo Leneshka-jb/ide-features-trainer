@@ -2,6 +2,7 @@ package php.codeGolf.training.util
 
 import com.google.common.util.concurrent.ThreadFactoryBuilder
 import com.intellij.ide.DataManager
+import com.intellij.ide.plugins.IdeaPluginDescriptor
 import com.intellij.ide.plugins.PluginManager
 import com.intellij.ide.plugins.PluginManagerCore
 import com.intellij.lang.Language
@@ -9,6 +10,7 @@ import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.actionSystem.CommonDataKeys
 import com.intellij.openapi.editor.Editor
+import com.intellij.openapi.extensions.PluginId
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.popup.Balloon
 import com.intellij.openapi.ui.popup.JBPopupFactory
@@ -70,7 +72,18 @@ const val trainerPluginConfigName : String = "ide-features-trainer.xml"
 
 val featureTrainerVersion: String by lazy {
   val featureTrainerPluginId = PluginManagerCore.getPluginByClassName(CourseManager::class.java.name)
-  PluginManager.getPlugin(featureTrainerPluginId)?.version ?: "UNKNOWN"
+  getPlugin(featureTrainerPluginId)?.version ?: "UNKNOWN"
+}
+
+internal fun getPlugin(id: PluginId?): IdeaPluginDescriptor? {
+  if (id != null) {
+    for (plugin in PluginManager.getPlugins()) {
+      if (id === plugin.getPluginId()) {
+        return plugin
+      }
+    }
+  }
+  return null
 }
 
 val isFeatureTrainerSnapshot: Boolean by lazy {
