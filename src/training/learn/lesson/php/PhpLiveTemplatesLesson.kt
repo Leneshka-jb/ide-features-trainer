@@ -50,7 +50,7 @@ ${'$'}elements = [1, "Blue", array(), 5];
     private fun checkHasElement(editor: Editor, condition: Condition<PsiElement>): Boolean {
         val psiFile = getPhpFile(editor) ?: return false
         val groupStatement = PhpPsiUtil.getChildByCondition<GroupStatement>(psiFile, GroupStatement.INSTANCEOF)
-        val element = PhpPsiUtil.getChildByCondition<PhpEchoStatement>(groupStatement, condition)
+        val element = PhpPsiUtil.getChildByCondition<PsiElement>(groupStatement, condition)
         return element != null
     }
 }

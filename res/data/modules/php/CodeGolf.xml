@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module name="Intro course before Code Golf" lessonsPath="CodeGolf/" version="0.1" id="phpCodeGolf" fileType="PROJECT"
         description="Welcome to the crash course prepared specifically for the conference and Code Golf competition.">
-    <lesson-kt sample="FindActions.php" implementationClass="training.learn.lesson.general.GotoActionLesson"
+    <lesson-kt sample="FindActions.php" implementationClass="training.learn.lesson.php.PhpGotoActionLesson"
                lang="PHP"/>
     <lesson filename="ImplementMissingMethodsWithAltEnter.xml" lang="php"/>
     <lesson-kt implementationClass="training.learn.lesson.php.PhpBasicCompletionsLesson"/>

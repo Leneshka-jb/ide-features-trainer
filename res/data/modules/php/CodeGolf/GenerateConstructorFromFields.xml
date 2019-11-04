@@ -1,4 +1,4 @@
-<xml type="Scenario" name="Generate" id="CodeGolf.GenerateConstructorFromFields" lang="PHP">
+<xml type="Scenario" name="Generate Code" id="php.CodeGolf.GenerateConstructorFromFields" lang="PHP">
     <CopyText><![CDATA[<?php
 
 class Data

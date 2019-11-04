@@ -1,4 +1,4 @@
-<xml type="Scenario" name="Extract Variable" id="CodeGolf.ExtractVariable" lang="PHP">
+<xml type="Scenario" name="Extract Variable" id="php.CodeGolf.ExtractVariable" lang="PHP">
     <MouseBlock>
         <CopyText><![CDATA[<?php
 
@@ -9,7 +9,7 @@ function report(string $inputName)
         <CaretBlock>
             <SetSelection start-position="5:12" end-position="5:56" />
             <MoveCaret position="5:36" />
-            <Try triggers="IntroduceVariable;NextTemplateVariable">Press <action>IntroduceVariable</action> to extract a variable.</Try>
+            <Try triggers="IntroduceVariable;NextTemplateVariable">Extracting nontrivial expression to a variable may make code way easier to read, and sometimes faster to run. Press <action>IntroduceVariable</action> to do it.</Try>
             <Win/>
         </CaretBlock>
     </MouseBlock>

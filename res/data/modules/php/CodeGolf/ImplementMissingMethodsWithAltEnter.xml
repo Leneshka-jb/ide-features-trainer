@@ -1,4 +1,4 @@
-<xml type="Scenario" name="Implement Missing Methods" id="CodeGolf.ImplementMissingMethodsWithAltEnter" lang="PHP">
+<xml type="Scenario" name="Fix Code" id="php.CodeGolf.ImplementMissingMethodsWithAltEnter" lang="PHP">
     <MouseBlock>
         <CopyText><![CDATA[<?php
 
@@ -11,9 +11,9 @@ class Fixer
 }
 ]]></CopyText>
     </MouseBlock>
-    <Try trigger="GotoNextError">Press <action>GotoNextError</action> to go to the next highlighted error in the file.
+    <Try trigger="GotoNextError">There are many ways IDE helps to get rid of errors in code. First, it highlights them and simplifies navigation in between. Press <action>GotoNextError</action> to go to the next highlighted error in the file.
     </Try>
-    <Try check="training.check.php.PhpImplementMissingMethodsWithAltEnterCheck">Press <action>ShowIntentionActions</action> and select <strong>Add method</strong>.
+    <Try check="training.check.php.PhpImplementMissingMethodsWithAltEnterCheck">To get all suggested actions there, press <action>ShowIntentionActions</action>. Then select <strong>Add method</strong> to generate missing method.
     </Try>
     <Win/>
 </xml>

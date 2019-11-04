@@ -10,7 +10,7 @@ import training.learn.lesson.kimpl.KLesson
 import training.learn.lesson.kimpl.LessonContext
 import training.learn.lesson.kimpl.parseLessonSample
 
-class PhpBasicCompletionsLesson(module: Module) : KLesson("Basic Completions", module, "PHP") {
+class PhpBasicCompletionsLesson(module: Module) : KLesson("Basic Ways of Completion", module, "PHP") {
     private val sample1 = parseLessonSample("""<?php
 
 class Cat
@@ -101,7 +101,7 @@ class Cat
             prepareSample(sample3)
             actionTask("CodeCompletion") { "Press ${action(it)}to show completion options." }
             task("EditorChooseLookupItemReplace") {
-                text("Choose <code>bringToy()</code>, for example, and press ${action("EditorTab")}.\n" +
+                text("Choose <code>bringToy()</code>, for example, and press ${action("EditorTab")}. " +
                         "This overwrites the word at the caret rather than simply inserting it.")
                 trigger(it)
                 trigger("EditorChooseLookupItemReplace") { textBeforeCaret(editor, "bringToy()") }
