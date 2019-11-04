@@ -5,7 +5,7 @@
 
     <description><![CDATA[
 
-        <p>Learn basic shortcuts and essential features interactively – right inside the IDE. No need to read long manuals or look for screencasts. Just install this plugin, open the IDE, and go to the Learn tool window to start php.codeGolf.training.</p>
+        <p>Learn basic shortcuts and essential features interactively – right inside the IDE. No need to read long manuals or look for screencasts. Just install this plugin, open the IDE, and go to the Learn tool window to start training.</p>
     ]]></description>
     <application-components>
         <component>
@@ -13,6 +13,7 @@
         </component>
     </application-components>
 
+    <depends>com.jetbrains.php</depends>
     <depends optional="true">com.intellij.testGuiFramework</depends>
 
     <!--<depends optional="true" config-file="java-deps.xml">com.intellij.modules.java</depends>
@@ -23,7 +24,7 @@
     &lt;!&ndash;<depends optional="true" config-file="objc-deps.xml">com.intellij.modules.cidr.lang</depends>&ndash;&gt;
     <depends optional="true" config-file="swift-deps.xml">com.intellij.modules.cidr.lang</depends>-->
     <!--<depends optional="true" config-file="webstorm-deps.xml">com.intellij.modules.webstorm</depends>-->
-    <depends config-file="phpstorm-deps.xml">com.jetbrains.php</depends>
+    <!--<depends config-file="phpstorm-deps.xml">com.jetbrains.php</depends>-->
     <!--<depends optional="true" config-file="clion-deps.xml">com.intellij.modules.clion</depends>-->
     <!--<depends optional="true" config-file="rider-deps.xml">com.intellij.modules.rider</depends>-->
 
@@ -94,5 +95,9 @@
                      description="This is internal option to use different development modes"
                      defaultValue="normal"
                      restartRequired="false"/>
+    </extensions>
+
+    <extensions defaultExtensionNs="php.codeGolf.training">
+        <TrainingLangExtension language="PHP" implementationClass="php.codeGolf.training.lang.PhpStormSupport"/>
     </extensions>
 </idea-plugin>
