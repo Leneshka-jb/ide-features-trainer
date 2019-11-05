@@ -10,7 +10,7 @@ import php.codeGolf.training.learn.lesson.kimpl.KLesson
 import php.codeGolf.training.learn.lesson.kimpl.LessonContext
 import php.codeGolf.training.learn.lesson.kimpl.parseLessonSample
 
-class PhpBasicCompletionsLesson(module: Module) : KLesson("Basic Ways of Completion", module, "PHP") {
+class PhpBasicCompletionsLesson(module: Module) : KLesson("Code Completion Basics", module, "PHP") {
     private val sample1 = parseLessonSample("""<?php
 
 class Cat
@@ -82,7 +82,7 @@ class Cat
         get() = {
             prepareSample(sample1)
             task {
-                text("By default, the IDE completes your code instantly. Start typing <code>pu</code> right where " +
+                text("By default, the IDE completes your code automatically as you type. Start typing <code>pu</code> right where " +
                         "the caret is, and you will see the Lookup Menu with matching suggestions. Choose the first item " +
                         "<code>purrr()</code> from the Lookup menu by pressing <action>EditorEnter</action>.")
                 trigger("EditorChooseLookupItem",
@@ -101,7 +101,7 @@ class Cat
             prepareSample(sample3)
             actionTask("CodeCompletion") { "Press ${action(it)}to show completion options." }
             task("EditorChooseLookupItemReplace") {
-                text("Choose <code>bringToy()</code>, for example, and press ${action("EditorTab")}. " +
+                text("Choose <code>bringToy()</code> and press ${action("EditorTab")}. " +
                         "This overwrites the word at the caret rather than simply inserting it.")
                 trigger(it)
                 trigger("EditorChooseLookupItemReplace") { textBeforeCaret(editor, "bringToy()") }

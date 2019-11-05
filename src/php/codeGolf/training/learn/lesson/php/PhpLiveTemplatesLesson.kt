@@ -31,7 +31,7 @@ ${'$'}elements = [1, "Blue", array(), 5];
         get() = {
             prepareSample(sample)
             task {
-                text("The IDE can offer code snippets, called Live Templates. Type ${code("eco")}, get completion and press ${action("EditorEnter")}.")
+                text("The IDE offers code snippets, called Live Templates. Type ${code("eco")} and press ${action("EditorEnter")}.")
                 trigger("EditorChooseLookupItem") {
                     checkHasElement(editor, (Condition { use: PsiElement -> use is PhpEchoStatement }))
                 }
@@ -39,8 +39,8 @@ ${'$'}elements = [1, "Blue", array(), 5];
             waitBeforeContinue(500)
             prepareSample(sample2)
             task {
-                text("All available samples one can see and configure at Settings | Editor | Live Templates.\n" +
-                        "For next example type ${code("fore")}, get completion and press ${action("EditorEnter")}.")
+                text("You can view and configure the available snippets at Settings | Editor | Live Templates.\n" +
+                        "Now, type ${code("fore")} and press ${action("EditorEnter")}.")
                 trigger("EditorChooseLookupItem") {
                     checkHasElement(editor, ForeachStatement.INSTANCEOF)
                 }

@@ -33,8 +33,8 @@ echo "The answer for {${'$'}ta<caret>sk} is the {${'$'}answer}"; """.trimIndent(
         get() = {
             prepareSample(sample1)
             task {
-                text("PhpStorm has a set of intentions to switch a string literal between different presentations: " +
-                        "concatenation, interpolation, sprintf, HEREDOC and NOWDOC. To use them, press " +
+                text("PhpStorm provides several intention actions to switch a string literal between different presentations: " +
+                        "concatenation, interpolation, sprintf, HEREDOC and NOWDOC.\nTo get started, press " +
                         "<action>ShowIntentionActions</action> and select <strong>Convert concatenation to sprintf call</strong>.")
                 trigger("ShowIntentionActions",
                         { editor.document.text },
@@ -43,8 +43,8 @@ echo "The answer for {${'$'}ta<caret>sk} is the {${'$'}answer}"; """.trimIndent(
             waitBeforeContinue(500)
             prepareSample(sample2)
             task {
-                text("There are more transformations to try. Press <action>ShowIntentionActions</action> one more" +
-                        "time and choose <strong>Convert sprintf call to string interpolation</strong>.")
+                text("There are more transformations to try. Press <action>ShowIntentionActions</action>  again " +
+                        "and select <strong>Convert sprintf call to string interpolation</strong>.")
                 trigger("ShowIntentionActions",
                         { editor.document.text },
                         { before, now -> now.contains("{${'$'}task}") && now != before })

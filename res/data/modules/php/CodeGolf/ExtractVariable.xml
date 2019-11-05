@@ -9,7 +9,7 @@ function report(string $inputName)
         <CaretBlock>
             <SetSelection start-position="5:12" end-position="5:56" />
             <MoveCaret position="5:36" />
-            <Try triggers="IntroduceVariable;NextTemplateVariable">Extracting nontrivial expression to a variable may make code way easier to read, and sometimes faster to run. Press <action>IntroduceVariable</action> to do it.</Try>
+            <Try triggers="IntroduceVariable;NextTemplateVariable">Extracting a non-trivial expression to a variable can make your code clearer and sometimes faster. Press <action>IntroduceVariable</action> to do it.</Try>
             <Win/>
         </CaretBlock>
     </MouseBlock>
