@@ -1,11 +1,12 @@
 <idea-plugin>
     <id>php.codeGolf.training</id>
-    <name>IDE Features Trainer</name>
+    <name>PhpStorm Code Golf Crash Course</name>
     <vendor url="http://www.jetbrains.com">JetBrains</vendor>
 
     <description><![CDATA[
-
-        <p>Learn basic shortcuts and essential features interactively – right inside the IDE. No need to read long manuals or look for screencasts. Just install this plugin, open the IDE, and go to the Learn tool window to start training.</p>
+        <p>Get prepared for Code Golf! Learn the basic required shortcuts and essential features interactively,
+        right inside the IDE. No need for manuals or screencasts: install the plugin, switch to the Learn tool window,
+        and start training.</p>
     ]]></description>
     <application-components>
         <component>
@@ -77,7 +78,8 @@
     </project-components>
 
     <actions>
-        <action id="Learn.WelcomeScreen.StartLearn" class="php.codeGolf.training.actions.StartLearnAction" icon="/img/chevron.png">
+        <action id="Learn.WelcomeScreen.StartLearn" class="php.codeGolf.training.actions.StartLearnAction"
+                icon="/img/chevron.png">
             <add-to-group group-id="WelcomeScreen.QuickStart" anchor="last"/>
         </action>
 
@@ -88,7 +90,8 @@
         </action>
         <action id="learn.open.lesson" text="Open Lesson" class="php.codeGolf.training.actions.OpenLessonAction"/>
         <!--TODO: REMOVE THIS ACTION BEFORE RELEASE-->
-        <action id="learn.open.chooseLang" text="Choose Lang" class="php.codeGolf.training.actions.ShowChooseLangPanelAction"/>
+        <action id="learn.open.chooseLang" text="Choose Lang"
+                class="php.codeGolf.training.actions.ShowChooseLangPanelAction"/>
     </actions>
 
     <extensions defaultExtensionNs="com.intellij">
