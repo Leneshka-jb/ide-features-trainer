@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-
-<idea-plugin>
-    <extensions defaultExtensionNs="php.codeGolf.training">
-        <TrainingLangExtension language="go" implementationClass="php.codeGolf.training.lang.GoLangSupport"/>
-    </extensions>
-</idea-plugin>

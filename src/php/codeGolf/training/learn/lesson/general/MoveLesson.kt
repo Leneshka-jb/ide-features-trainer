@@ -4,7 +4,6 @@ import com.intellij.diff.tools.util.text.LineOffsetsUtil
 import com.intellij.openapi.vcs.ex.compareLines
 import com.intellij.util.containers.ContainerUtil
 import php.codeGolf.training.commands.ShowLineNumberCommand
-import php.codeGolf.training.lang.JavaLangSupport
 import php.codeGolf.training.learn.interfaces.Module
 import php.codeGolf.training.learn.lesson.kimpl.KLesson
 import php.codeGolf.training.learn.lesson.kimpl.LessonContext
@@ -24,7 +23,6 @@ class MoveLesson(module: Module, lang: String, private val sample: LessonSample)
       actionTask("MoveLineUp") {
         "Similarly, to pull a line up, use ${action(it)}."
       }
-      if (lang == JavaLangSupport.lang) caret(9, 5)
       task("MoveStatementUp") {
         text("Now try moving the whole method up with ${action(it)}.")
         trigger(it, { editor.document.text }, { before, now ->
