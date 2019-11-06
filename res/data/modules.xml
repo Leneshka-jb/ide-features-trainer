@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <modules>
-    <language lang="php">
+    <language lang="PHP">
         <module name="modules/php/CodeGolf.xml"/>
     </language>
 </modules>

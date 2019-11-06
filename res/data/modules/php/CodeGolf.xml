@@ -3,10 +3,10 @@
         description="Welcome! This crash course will get you ready for the Code Golf competition.">
     <lesson-kt sample="FindActions.php" implementationClass="php.codeGolf.training.learn.lesson.php.PhpGotoActionLesson"
                lang="PHP"/>
-    <lesson filename="ImplementMissingMethodsWithAltEnter.xml" lang="php"/>
+    <lesson filename="ImplementMissingMethodsWithAltEnter.xml" lang="PHP"/>
     <lesson-kt implementationClass="php.codeGolf.training.learn.lesson.php.PhpBasicCompletionsLesson"/>
     <lesson-kt implementationClass="php.codeGolf.training.learn.lesson.php.PhpLiveTemplatesLesson"/>
-    <lesson filename="ExtractVariable.xml" lang="php"/>
-    <lesson filename="GenerateConstructorFromFields.xml" lang="php"/>
+    <lesson filename="ExtractVariable.xml" lang="PHP"/>
+    <lesson filename="GenerateConstructorFromFields.xml" lang="PHP"/>
     <lesson-kt implementationClass="php.codeGolf.training.learn.lesson.php.PhpStringConversionLesson"/>
 </module>

@@ -10,7 +10,7 @@ class PhpStormSupport : AbstractLangSupport() {
 
     companion object {
         @JvmStatic
-        val lang: String = "php"
+        val lang: String = "PHP"
     }
 
     override val filename: String
