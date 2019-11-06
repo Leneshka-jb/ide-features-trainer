@@ -33,7 +33,7 @@
 
         <actionPromoter implementation="php.codeGolf.training.editor.actions.LearnActionPromoter"/>
         <!-- groupId should be same to StatisticBase.GROUP_ID and version to StatisticBase.VERSION -->
-        <statistics.counterUsagesCollector groupId="ideFeaturesTrainer" version="3"/>
+        <statistics.counterUsagesCollector groupId="php.codeGolf.ideFeaturesTrainer" version="1"/>
         <statistics.validation.customWhiteListRule
                 implementation="php.codeGolf.training.statistic.IdeFeaturesTrainerRuleValidator"/>
 
