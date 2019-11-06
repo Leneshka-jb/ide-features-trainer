@@ -42,11 +42,7 @@ intellij {
     version 'IU-193.4778-EAP-CANDIDATE-SNAPSHOT'
 
     plugins = [
-            'Pythonid:193.4778.7',
-            'org.jetbrains.plugins.ruby:193.4778.7',
             'com.intellij.testGuiFramework:0.9.44.1@nightly',
-            'java',
-            'org.jetbrains.plugins.go:193.4778.7.3',
             'com.jetbrains.php:193.4778.7'
     ]
     if (System.getProperty("idea.gui.test.alternativeIdePath") != null) {
