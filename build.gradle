@@ -39,15 +39,11 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 intellij {
-    version 'IU-193.4778-EAP-CANDIDATE-SNAPSHOT'
+    version 'IU-2019.2.4'
 
     plugins = [
-            'Pythonid:193.4778.7',
-            'org.jetbrains.plugins.ruby:193.4778.7',
             'com.intellij.testGuiFramework:0.9.44.1@nightly',
-            'java',
-            'org.jetbrains.plugins.go:193.4778.7.3',
-            'com.jetbrains.php:193.4778.7'
+            'com.jetbrains.php:192.7142.41'
     ]
     if (System.getProperty("idea.gui.test.alternativeIdePath") != null) {
         alternativeIdePath System.getProperty("idea.gui.test.alternativeIdePath")

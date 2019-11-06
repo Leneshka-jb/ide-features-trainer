@@ -19,7 +19,6 @@ import com.intellij.openapi.wm.ToolWindowAnchor
 import com.intellij.openapi.wm.ToolWindowManager
 import com.intellij.openapi.wm.WindowManager
 import com.intellij.openapi.wm.impl.IdeFrameImpl
-import com.intellij.openapi.wm.impl.ProjectFrameHelper
 import com.intellij.openapi.wm.impl.StripeButton
 import com.intellij.openapi.wm.impl.ToolWindowsPane
 import com.intellij.ui.GotItMessage
@@ -146,14 +145,7 @@ class LearnProjectComponent private constructor(private val myProject: Project) 
   }
 
   private fun showGotMessage(tittle: String, message: String, gotMessageClicked: () -> Unit) {
-
-    ApplicationManager.getApplication().invokeLater {
-      val alarm = Alarm()
-      alarm.addRequest({
-        pointToLearnStripeButton(tittle, message, gotMessageClicked)
-        Disposer.dispose(alarm)
-      }, 5000)
-    }
+    ToolWindowManager.getInstance(myProject).invokeLater{pointToLearnStripeButton(tittle, message, gotMessageClicked)}
   }
 
   private val toolWindowAnchor: ToolWindowAnchor
@@ -214,11 +206,7 @@ class LearnProjectComponent private constructor(private val myProject: Project) 
       val wm = WindowManager.getInstance() ?: return null
       val ideFrame = wm.getIdeFrame(myProject) ?: return null
 
-      val frame= if (ideFrame is ProjectFrameHelper) {
-        (wm.getIdeFrame(myProject) as ProjectFrameHelper).frame
-      } else {
-        (ideFrame as IdeFrameImpl)
-      }
+      val frame= ideFrame as IdeFrameImpl
       val rootPane = frame.rootPane
       val pane = UIUtil.findComponentOfType(rootPane, ToolWindowsPane::class.java)
       val componentsOfType = UIUtil.findComponentsOfType(pane, StripeButton::class.java)
