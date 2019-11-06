@@ -2,7 +2,6 @@ package php.codeGolf.training.actions
 
 import com.intellij.ide.scratch.ScratchFileService
 import com.intellij.ide.scratch.ScratchRootType
-import com.intellij.ide.startup.StartupManagerEx
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.actionSystem.DataKey
@@ -27,7 +26,6 @@ import php.codeGolf.training.learn.CourseManager
 import php.codeGolf.training.learn.LearnBundle
 import php.codeGolf.training.learn.NewLearnProjectUtil
 import php.codeGolf.training.learn.dialogs.AskToSwitchToLearnProjectBackDialog
-import php.codeGolf.training.learn.dialogs.SdkModuleProblemDialog
 import php.codeGolf.training.learn.exceptons.*
 import php.codeGolf.training.learn.interfaces.Lesson
 import php.codeGolf.training.learn.interfaces.ModuleType
@@ -196,8 +194,6 @@ class OpenLessonAction : AnAction() {
         } catch (noSdkException: InvalidSdkException) {
             Messages.showMessageDialog(projectWhereToStartLesson, LearnBundle.message("dialog.noSdk.message", LangManager.getInstance().getLanguageDisplayName()), LearnBundle.message("dialog.noSdk.title"), Messages.getErrorIcon())
             if (ProjectSettingsService.getInstance(projectWhereToStartLesson).chooseAndSetSdk() != null) openLesson(projectWhereToStartLesson, lesson)
-        } catch (noJavaModuleException: NoJavaModuleException) {
-            showModuleProblemDialog(projectWhereToStartLesson)
         } catch (e: Exception) {
             e.printStackTrace()
         }
@@ -312,10 +308,6 @@ class OpenLessonAction : AnAction() {
 //        dialog.show()
 //    }
 //
-    private fun showModuleProblemDialog(project: Project) {
-        val dialog = SdkModuleProblemDialog(project)
-        dialog.show()
-    }
 
     private fun askSwitchToLearnProjectBack(learnProject: Project, currentProject: Project) {
         val dialog = AskToSwitchToLearnProjectBackDialog(learnProject, currentProject)

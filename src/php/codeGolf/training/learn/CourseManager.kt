@@ -15,7 +15,6 @@ import php.codeGolf.training.actions.OpenLessonAction
 import php.codeGolf.training.lang.LangManager
 import php.codeGolf.training.lang.LangSupport
 import php.codeGolf.training.learn.exceptons.InvalidSdkException
-import php.codeGolf.training.learn.exceptons.NoJavaModuleException
 import php.codeGolf.training.learn.interfaces.Lesson
 import php.codeGolf.training.learn.interfaces.Module
 import php.codeGolf.training.util.XmlModuleConstants
@@ -95,7 +94,7 @@ class CourseManager internal constructor() {
    * *
    * @throws InvalidSdkException - if project SDK is not suitable for module
    */
-  @Throws(InvalidSdkException::class, NoJavaModuleException::class)
+  @Throws(InvalidSdkException::class)
   fun checkEnvironment(project: Project) {
     val sdk = ProjectRootManager.getInstance(project).projectSdk
     LangManager.getInstance().getLangSupport()?.checkSdk(sdk, project) ?: throw Exception("Language for learning plugin is not defined")
